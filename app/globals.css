@@ -28,3 +28,8 @@ a { color:inherit; text-decoration:none; }
 /* Match the AI capability to the bold capability titles. */
 .skill-grid::after { content:"AI + vibe dev"; white-space:normal; padding:22px 0 22px 24px; color:var(--text); font-family:inherit; font-size:18px; font-weight:700; line-height:1.2; border-left:1px solid var(--line); }
 @media (max-width:760px) { .skill-grid::after { border-left:0; padding:18px 0; } }
+
+/* Restore the supporting caption while preserving the bold title treatment. */
+.skill-grid::before { content:"AI + vibe dev"; grid-column:4; grid-row:1; padding:22px 0 0 74px; color:var(--text); font-family:inherit; font-size:18px; font-weight:700; line-height:1.2; }
+.skill-grid::after { content:"rapid prototypes\A smart creative workflows"; white-space:pre; grid-column:4; grid-row:1; padding:56px 0 22px 74px; color:var(--muted); font:11px monospace; line-height:1.5; border-left:1px solid var(--line); }
+@media (max-width:760px) { .skill-grid::before { grid-column:1; grid-row:auto; padding-top:18px; }.skill-grid::after { grid-column:1; grid-row:auto; padding:0 0 18px 0; border-left:0; } }
