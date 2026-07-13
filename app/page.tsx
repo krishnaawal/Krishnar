@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <Link href="/" className="brand" aria-label="Krishna Rawal home"><img src="/logo1.png" alt="Krishna Rawal logo" width="36" height="44" /><span>krishna<span className="muted">.rawal</span></span></Link>
+        <Link href="/" className="brand" aria-label="Krishna Rawal home"><img src="/logo1.png" alt="Krishna Rawal logo" width="48" height="58" /></Link>
         <nav className="desktop-nav" aria-label="Main navigation">
           <Link href="/#about">about</Link><Link href="/projects">projects</Link><Link href="/#notes">notes</Link><Link href="/#contact" className="nav-cta">let&apos;s talk ↗</Link>
         </nav>
