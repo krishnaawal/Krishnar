@@ -26,7 +26,7 @@ test("renders the real projects page", async () => {
   const response = await render("/projects");
   assert.equal(response.status, 200);
   const html = await response.text();
-  for (const project of ["Artree Nepal", "Plumeria", "GharBazaar", "ShoePasal", "Pokhara Pizza"]) {
+  for (const project of ["Artree Nepal", "Plumeria", "GharBazaar", "NepKicks", "Pokhara Pizza"]) {
     assert.match(html, new RegExp(project));
   }
   assert.match(html, /Things I&#x27;ve/);
