@@ -18,7 +18,6 @@ const graphicWorks = [
   { title: "Coffee campaign", image: "/design-coffee.jpg", className: "graphic-tall" },
   { title: "Portrait direction", image: "/design-portrait.jpg", className: "" },
   { title: "Visual experiment", image: "/design-untitled.jpg", className: "" },
-  { title: "Brand study", image: "/design-cropped.png", className: "graphic-tall" },
 ];
 
 export default function Home() {
