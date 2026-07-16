@@ -17,17 +17,20 @@ a { color:inherit; text-decoration:none; }
 @media (max-width:760px) { .shell { width:calc(100% - 38px); }.site-header { height:78px; }.desktop-nav { display:none; }.mobile-menu { display:block; }.hero-new { display:block; padding:70px 0 80px; }.hero-kicker { margin-top:38px; }.hero-new h1 { font-size:clamp(46px,14vw,74px); }.hero-visual { min-height:420px; margin-top:55px; }.portrait-frame { width:78%; }.visual-stamp { right:0; }.signal-inner { gap:20px; flex-wrap:wrap; }.signal-inner span:last-child { display:none; }.intro-section,.work-section,.graphics-section { padding-top:82px; }.intro-grid { display:block; padding-top:35px; }.intro-copy { margin-top:30px; }.skill-grid { grid-template-columns:1fr; margin-top:55px; }.skill-grid div,.skill-grid div+div { padding:18px 0; border-right:0; border-bottom:1px solid var(--line); }.skill-grid div:last-child { border-bottom:0; }.work-row { grid-template-columns:28px 58px 1fr 20px; gap:10px; }.work-mark { width:52px; font-size:17px; }.work-name strong { font-size:19px; }.graphics-heading { display:block; }.graphics-heading p { margin-top:25px; }.graphics-grid { grid-template-columns:1fr; }.graphics-grid figure { aspect-ratio:1.25; }.contact-section { padding-top:90px; }.site-footer { display:grid; gap:16px; }.site-footer div { margin-top:4px; }.projects-intro { padding:72px 0 58px; }.projects-intro h1 { font-size:clamp(52px,15vw,80px); }.projects-intro > p:last-child { margin-left:0; }.projects-table { padding-top:35px; }.project-item { display:block; padding-bottom:42px; margin-bottom:34px; }.project-details { padding-top:25px; }.project-details h2 { margin:28px 0 14px; } }
 @media (prefers-reduced-motion:reduce) { *,*:before,*:after { animation-duration:.01ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; transition-duration:.01ms!important; } }
 
-/* AI-assisted rapid prototyping is part of the practice. */
-.hero-kicker::after { content:" · AI + vibe developer"; color:var(--lime); }
-.skill-grid { grid-template-columns:repeat(4,1fr); }
-.skill-grid::after { content:"04  AI + vibe dev\A    rapid prototypes\A    smart creative workflows"; white-space:pre; display:block; padding:22px 0 22px 24px; color:var(--muted); font:11px monospace; line-height:1.5; border-left:1px solid var(--line); }
-@media (max-width:760px) { .skill-grid { grid-template-columns:1fr; }.skill-grid::after { border-left:0; padding:18px 0; } }
-
-/* Match the AI capability to the bold capability titles. */
-.skill-grid::after { content:"AI + vibe dev"; white-space:normal; padding:22px 0 22px 24px; color:var(--text); font-family:inherit; font-size:18px; font-weight:700; line-height:1.2; border-left:1px solid var(--line); }
-@media (max-width:760px) { .skill-grid::after { border-left:0; padding:18px 0; } }
-
-/* Restore the supporting caption while preserving the bold title treatment. */
-.skill-grid::before { content:"AI + vibe dev"; grid-column:4; grid-row:1; padding:22px 0 0 74px; color:var(--text); font-family:inherit; font-size:18px; font-weight:700; line-height:1.2; }
-.skill-grid::after { content:"rapid prototypes\A smart creative workflows"; white-space:pre; grid-column:4; grid-row:1; padding:56px 0 22px 74px; color:var(--muted); font:11px monospace; line-height:1.5; border-left:1px solid var(--line); }
-@media (max-width:760px) { .skill-grid::before { grid-column:1; grid-row:auto; padding-top:18px; }.skill-grid::after { grid-column:1; grid-row:auto; padding:0 0 18px 0; border-left:0; } }
+.skill-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.skill-grid div { min-width:0; }
+@media (max-width:760px) {
+  .skill-grid { grid-template-columns:1fr; }
+  .skill-grid div { grid-template-columns:42px 1fr; padding:18px 0; border-right:0; border-bottom:1px solid var(--line); }
+  .skill-grid div+div { padding-left:0; }
+  .skill-grid div:last-child { border-bottom:0; }
+  .skill-grid strong { font-size:18px; }
+  .skill-grid span { display:block; }
+  .hero-actions { flex-wrap:wrap; gap:18px; }
+  .hero-lede { max-width:100%; }
+  .intro-grid h2 { font-size:clamp(38px,11vw,58px); }
+  .section-label { grid-template-columns:36px 1fr auto; gap:10px; }
+  .section-label span:nth-child(2) { min-width:0; }
+  .section-label a { font-size:10px; }
+  .work-name strong { overflow-wrap:anywhere; }
+}
